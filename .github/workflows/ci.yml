@@ -31,10 +31,9 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: gactions-image
-        registry: 964177495539.dkr.ecr.us-east-1.amazonaws.com
+        image: image-name
+        registry: [aws-account-number].dkr.ecr.[region].amazonaws.com
       env:
-        AWS_ACCESS_KEY_ID: ASIA6A7LVAXZ27NK5FTS
-        AWS_SECRET_ACCESS_KEY: IAzarHsZrXJdiDxp2Eft5ZCGNOZDJl8TcYq3LJ7H
-        AWS_SESSION_TOKEN: IQoJb3JpZ2luX2VjEPj//////////wEaCXVzLWVhc3QtMSJHMEUCIQCzzuvodAUMyGXO1trYe61AX6eHsoJ7/mJX4y1yjajqtQIgAmDaaDwbgdqLVxmQc2dfI9GEboTGRKvsZBfWXlyw2hgqngIIYRAAGgw5NjQxNzc0OTU1MzkiDE0xe04/GyOjzxceISr7ATYK22RJLwnK8Mt6P6Y5EhkFT9ZiS6bzWRK2L5sqYS+Lg0Zv9hPFZtTYmq0RVv8bqfPplRIzYi9mBD+vUL3TpLAOTQPN67ki7Is4pZXpE8bdbj7pOL/GvRNXNoPTS+5FmrhejNdueKUoeXn3F02OpEiBXbBwxX8+7sxJwKqZvMcRCdDBYEljOwg4plMbfWFjRVKcn/eJxmKa4wWmDp5k2icX7bEViWwZE09k58+PeaAa6DMYIeUAZdFAchvNGLqHN4iaUe09hmmgnwQ7nXbAghMv2Z0YbZ+aVbVZZqERxxD9Bw0vo5sEzNlA+bdcRqwT64uCk7OG27sLYIW/MNKI7KQGOp0B6TEiZyhaBFqT2gyc1yUOQH6vwiBQOgaT1v26uUm0AprAahALrNaE8vSDvDZYeOYPR6hD+tjPemc2gw+Uqy8tqI1TUUcj+0W80hIrvom0WlsUormoTaApX/lrw5OY1GS8Sre4WFDv7R0VWEuMWLFfuKHk9ttf+Q9G+v6qdOSzqNMMlyIDdf93JOocjBhjELgCrwJpx1OV4n7hRpO4JQ==
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          
