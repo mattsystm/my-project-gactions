@@ -29,10 +29,11 @@ jobs:
       run: ./gradlew build
 
     - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: mattsystm/gactions
-        registry: docker.io
-        username: 'mattsystm'
-        password: 'Istanbul34'
+        image: gactions-image
+        registry: 964177495539.dkr.ecr.us-east-1.amazonaws.com
+      env:
+        AWS_ACCESS_KEY_ID: ASIA6A7LVAXZ27NK5FTS
+        AWS_SECRET_ACCESS_KEY: IAzarHsZrXJdiDxp2Eft5ZCGNOZDJl8TcYq3LJ7H
          
