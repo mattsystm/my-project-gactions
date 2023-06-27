@@ -34,5 +34,5 @@ jobs:
         image: nanajanashia/demo-app
         registry: docker.io
         username: 'mattsystm'
-        password: 'istanbul34'
+        password: 'Istanbul34'
          
